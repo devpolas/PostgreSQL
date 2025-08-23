@@ -1,0 +1,8 @@
+CREATE TABLE
+  IF NOT EXISTS cities (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    country VARCHAR(50) NOT NULL,
+    population INTEGER NOT NULL,
+    area INTEGER NOT NULL
+  )
