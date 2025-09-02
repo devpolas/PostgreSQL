@@ -26,9 +26,32 @@
 --   photos
 --   RIGHT JOIN users ON users.id=photos.user_id;
 -- ------------------------------------------------------------
+-- SELECT
+--   url,
+--   username
+-- FROM
+--   photos
+--   FULL JOIN users ON users.id=photos.user_id;
+-- ----------------------------------------------------------
+-- SELECT
+--   MAX(id)
+-- FROM
+--   comments;
+-- --------------------------------------------------------------
+-- SELECT
+--   user_id,
+--   COUNT(*)
+-- FROM
+--   comments
+-- GROUP BY
+--   user_id;
+-- ------------------------------------------------------------
 SELECT
-  url,
-  username
+  photo_id,
+  COUNT(*)
 FROM
-  photos
-  FULL JOIN users ON users.id=photos.user_id;
+  comments
+GROUP BY
+  photo_id
+ORDER BY
+  photo_id ASC;
