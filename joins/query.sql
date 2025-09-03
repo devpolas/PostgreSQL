@@ -46,12 +46,24 @@
 -- GROUP BY
 --   user_id;
 -- ------------------------------------------------------------
+-- SELECT
+--   photo_id,
+--   COUNT(*)
+-- FROM
+--   comments
+-- GROUP BY
+--   photo_id
+-- ORDER BY
+--   photo_id ASC;
+-- ----------------------------------------------------------------
 SELECT
-  photo_id,
+  user_id,
   COUNT(*)
 FROM
   comments
+WHERE
+  photo_id<=50
 GROUP BY
-  photo_id
-ORDER BY
-  photo_id ASC;
+  user_id
+HAVING
+  COUNT(*)>=20
